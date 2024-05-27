@@ -1,0 +1,15 @@
+get multiple networks to work together for inputs of a length
+one network per part of the input
+connections between hidden layers of the different networks
+! identical weights of the networks
+-> networks for different timesteps "act" the same way
+every state is a function of all states before that
+-> in practice: memory of ~5 timesteps
+different weight matrix for: input -> hidden state; hidden state to hidden state; hidden state to output
+-> same for different timesteps
+
+so how do you train the network?
+usually: back propagation
+for rnns: back propagation through time
+goal: optimize a loss function L
+L = sum of Losses per timestep
